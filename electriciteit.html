@@ -4,20 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Electriciteit — Troosbouw</title>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      line-height: 1.6;
-      color: #111;
-      max-width: 900px;
-      margin: 32px auto;
-      padding: 0 20px;
-    }
-    header h1 { margin: 0 0 6px; font-size: 28px; }
-    header p { margin: 0 0 18px; color: #555; }
-    h2 { margin-top: 26px; font-size: 20px; border-bottom: 1px solid #eee; padding-bottom: 6px; }
-    h3 { margin-top: 18px; font-size: 16px; }
-    p { margin: 12px 0; }
+<style>
+  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+  h1 { color: #2E3B4E; }
+  h2 { color: #3E4C63; }
+  h3 { color: #4E5C73; }
+  h4 { color: #5E6C83; }
+  ul { margin-bottom: 15px; }
+  li { margin-bottom: 5px; }
+  img { max-width: 100%; height: auto; margin: 10px 0; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+  table, th, td { border: 1px solid #999; }
+  th, td { padding: 8px; text-align: left; }
+  hr { margin: 30px 0; border: 0; border-top: 1px solid #ccc; }
+  img{width: 50%;}
+  
+  #toc {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 1em;
+    max-width: 400px;
+    background: #f9f9f9;
+    border-radius: 6px;
+  }
     ul { margin: 8px 0 16px 20px; }
     .note { background: #fff8e6; border-left: 4px solid #ffd66b; padding: 10px 12px; color: #6a4b00; }
     .image-placeholder {
@@ -30,9 +39,83 @@
       color: #888;
       margin: 14px 0;
     }
-    footer { margin-top: 36px; color: #666; font-size: 13px; }
-    code { background:#f3f3f3; padding:2px 6px; border-radius:4px; }
-    img{width:49%;}
+  #toc h2 {
+    margin-top: 0;
+  }
+
+  #collapse-all {
+    margin-bottom: 0.5em;
+    padding: 0.3em 0.6em;
+    font-size: 0.9em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #eee;
+  }
+
+  #toc ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0.5em;
+  }
+
+  #toc li {
+    margin: 0.2em 0;
+  }
+
+  #toc a {
+    text-decoration: none;
+    color: #0073e6;
+  }
+
+  #toc a:hover {
+    text-decoration: underline;
+  }
+
+  .toc-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0.2em 0;
+    padding: 0;
+    color: #333;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .collapsed {
+    display: none;
+  }
+  .expanded {
+    display: block;
+  }
+
+  /* Level styling */
+  #toc > ul > li > .toc-toggle {
+    font-size: 1.05em;
+    color: #222;
+  }
+  #toc ul ul > li > .toc-toggle,
+  #toc ul ul > li > a {
+    font-size: 0.95em;
+    color: #444;
+    padding-left: 1em;
+  }
+  #toc ul ul ul > li > .toc-toggle,
+  #toc ul ul ul > li > a {
+    font-size: 0.9em;
+    color: #555;
+    padding-left: 2em;
+    font-style: italic;
+  }
+  #toc ul ul ul ul > li > .toc-toggle,
+  #toc ul ul ul ul > li > a {
+    font-size: 0.85em;
+    color: #666;
+    padding-left: 3em;
+  }
   </style>
 </head>
 <body>
